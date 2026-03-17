@@ -1,0 +1,83 @@
+.calculadora-retro {
+    width: 250px;
+    background-color: #c0c0c0; /* Gris clásico */
+    padding: 15px;
+    border: 3px outset #fff; /* Relieve hacia afuera */
+    margin: 50px auto;
+}
+
+#pantalla {
+    width: 100%;
+    height: 40px;
+    background-color: #90a090; /* Verde digital viejo */
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+    border: 3px inset #555; /* Relieve hacia adentro */
+    padding: 5px;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+button {
+    padding: 10px;
+    font-weight: bold;
+    border: 2px outset #eee;
+    background-color: #d0d0d0;
+    cursor: pointer;
+}
+
+button:active {
+    border: 2px inset #eee; /* Se hunde al pulsar */
+}
+
+#igual {
+    grid-row: span 1;
+    background-color: #ff5555; /* Un rojo para el botón de igual */
+}
+
+.imagen1 {
+
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+
+
+
+}
+
+h1 {
+
+    text-align: center;
+
+}
+
+/* 1. Definimos la animación (los "pasos") */
+@keyframes girar-infinito {
+    from {
+        transform: rotate(0deg); /* Empieza en 0 grados */
+    }
+    to {
+        transform: rotate(360deg); /* Termina en 360 grados */
+    }
+}
+
+/* 2. Aplicamos la animación a la imagen */
+.imagen-rotatoria {
+    width: 200px;
+    height: auto;
+    
+    /* ESTO ES CLAVE: Nombre de la animación, duración, tipo de curva, y 'infinite' */
+    animation: girar-infinito 5s linear infinite;
+}
+
+img {
+
+    display: block;
+    margin: 0 auto;
+}
